@@ -3,6 +3,5 @@ angular.module('h2cApp', [])
         var h2c = this;
         h2c.doSomething = function() {
             alert('boo');
-        });
-    };
-});
+        };
+    });
