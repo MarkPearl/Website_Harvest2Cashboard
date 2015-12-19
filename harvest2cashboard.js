@@ -14,6 +14,8 @@ angular.module('h2cApp', [])
             };
 
             var config = {};
-            $http.get('http://www.w3schools.com/angular/customers.php', config).then(successCallback, errorCallback);
+            var url = "https://" + h2c.subdomain + "harvestapp.com/clients";
+            alert(url);
+            $http.get(url,  config).then(successCallback, errorCallback);
         };
     });
