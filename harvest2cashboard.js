@@ -2,8 +2,6 @@ angular.module('h2cApp', [])
     .controller('harvest2CashboardController', function($http) {
         var h2c = this;
 
-        jjj
-
         h2c.doSomething = function() {
             alert('boo');
 
