@@ -3,11 +3,10 @@ angular.module('h2cApp', [])
         var h2c = this;
 
         h2c.doSomething = function() {
-            alert('boo');
+            alert(h2c.userName + ' : ' + h2c.password);
 
             var successCallback = function(res) {
                 alert(res.data.records);
-                alert(h2c.userName);
             };
 
             var errorCallback = function(err) {
