@@ -5,6 +5,9 @@ angular.module('h2cApp', [])
         h2c.doSomething = function() {
             alert(h2c.userName + ' : ' + h2c.password + " : " + h2c.subdomain);
 
+            var encoded = Base64.encode(h2c.username + ':' + h2c.password);
+            $http.defaults.headers.common.Authorization = 'Basic ' + encoded;
+
             var successCallback = function(res) {
                 alert(res.data.records);
             };
