@@ -3,13 +3,15 @@ angular.module('h2cApp', [])
         var h2c = this;
         h2c.doSomething = function() {
             alert('boo');
-            $http({
-                    method: 'GET',
-                    url: '/'
-            }).then(function successCallback(response) {
+
+            var successCallback = function() {
                 alert('success');
-            }, function errorCallback(response) {
+            };
+
+            var errorCallback = function() {
                 alert('failed');
-            });
+            };
+
+            $http.get('/someURL', config).then(successCallback, errorCallback);
         };
     });
