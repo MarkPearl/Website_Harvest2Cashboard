@@ -14,7 +14,7 @@ angular.module('h2cApp', [])
             };
 
             var config = {};
-            var url = "https://" + h2c.subdomain + "harvestapp.com/clients";
+            var url = "https://" + h2c.subdomain + ".harvestapp.com/clients";
             alert(url);
             $http.get(url,  config).then(successCallback, errorCallback);
         };
