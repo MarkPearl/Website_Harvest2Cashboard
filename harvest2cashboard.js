@@ -8,7 +8,7 @@ angular.module('h2cApp', [])
 
 
             var successCallback = function(res) {
-                alert(res.data.records);
+                alert(res);
             };
 
             var errorCallback = function(err) {
@@ -16,7 +16,7 @@ angular.module('h2cApp', [])
             };
 
             var config = {};
-            var url = "https://" + h2c.subdomain + ".harvestapp.com/clients";
+            var url = "https://" + h2c.subdomain + ".harvestapp.com/clients?callback=JSON_CALLBACK";
             alert(url);
             $http.jsonp(url,  config).then(successCallback, errorCallback);
         };
