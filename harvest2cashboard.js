@@ -4,14 +4,14 @@ angular.module('h2cApp', [])
         h2c.doSomething = function() {
             alert('boo');
 
-            var successCallback = function() {
+            var successCallback = function(res) {
                 alert('success');
             };
 
-            var errorCallback = function() {
+            var errorCallback = function(err) {
                 alert('failed');
             };
 
-            $http.get('/someURL', config).then(successCallback, errorCallback);
+            $http.get('http://www.w3schools.com/angular/customers.php').then(successCallback, errorCallback);
         };
     });
