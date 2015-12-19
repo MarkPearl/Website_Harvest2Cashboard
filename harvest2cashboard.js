@@ -12,6 +12,7 @@ angular.module('h2cApp', [])
                 alert('failed');
             };
 
-            $http.get('http://www.w3schools.com/angular/customers.php').then(successCallback, errorCallback);
+            var config = {};
+            $http.get('http://www.w3schools.com/angular/customers.php', config).then(successCallback, errorCallback);
         };
     });
