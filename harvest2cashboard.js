@@ -3,7 +3,7 @@ angular.module('h2cApp', [])
         var h2c = this;
 
         h2c.doSomething = function() {
-            alert(h2c.userName + ' : ' + h2c.password);
+            alert(h2c.userName + ' : ' + h2c.password + " : " + h2c.subdomain);
 
             var successCallback = function(res) {
                 alert(res.data.records);
