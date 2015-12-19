@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="h2cApp">
 <head>
-<meta charset="utf-8">
-<title>Harvest to Cashboard Converter</title>
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+	<meta charset="utf-8">
+	<title>Harvest to Cashboard Converter</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+	<script src="harvest2cashboard.js"></script>
 </head>
 <body>
-	<div>
-	      <label>Name:</label>
-	      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-	      <hr>
-	      <h1>Hello {{yourName}}!</h1>
+	<div ng-controller="harvest2cashboardController as h2c">
+		<form ng-submit="h2c.doSomething()">
+			<input type="text" ng-model="h2c.todoText" size="30" placeholder="add new todo here">
+			<input class="btn-primary" type="submit" value="do">
+		</form>
 	<div/>
 </body>
-</html>	
-
+</html>
