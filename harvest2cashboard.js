@@ -10,6 +10,6 @@ angular.module('h2cApp', [])
                 alert('success');
             }, function errorCallback(response) {
                 alert('failed');
-            }
+            });
         };
     });
