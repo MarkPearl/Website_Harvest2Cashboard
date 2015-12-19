@@ -5,7 +5,7 @@ angular.module('h2cApp', [])
             alert('boo');
 
             var successCallback = function(res) {
-                alert('success');
+                alert(res);
             };
 
             var errorCallback = function(err) {
